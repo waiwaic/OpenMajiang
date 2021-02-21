@@ -103,7 +103,7 @@ public class JsonUtils {
         }
     }
 
-    public static <T> T deserialize(String json, final Type type) {
+    public static <T> Object deserialize(String json, final Type type) {
         try {
             return mapper.readValue(json, new TypeReference<Object>(){
                 public Type getType() {
